@@ -1,0 +1,13 @@
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1684402674864",
+    "Statement": [
+        {
+            "Sid": "Stmt1684402672736",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::harsh-project-cli/*"
+        }
+    ]
+}

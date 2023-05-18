@@ -1,0 +1,31 @@
+<aws --version>		-(to check the os version) 
+
+<aws configure>		-(to set up the AWS Command Line Interface (CLI) on your local machine)
+
+<aws s3 ls>			-(to list all the available buckets>
+
+<aws s3 mb s3://bucket-name>		-(to create bucket)
+
+<aws s3 rb( s3://bucket-name>		-(to delete bucket)
+
+<aws s3 cp /path_to_local_file s3://bucket-name/file_name>		-(to upload file)
+
+<aws s3 sync <path_of _local_directory> s3://bucket_name>		-(to upload all files to the bucket)
+
+<aws s3 ls s3://bucket-name>		-(to list files from the bucket)
+
+<aws s3 rm s3://bucket-name --recursive>		-(to empty bucket)
+
+<aws s3 rm s3://bucket-name/path-to-file>		-(to delete file)
+
+<aws s3 mb s3://bucket-name>			-(create bucket)
+
+<aws s3 website s3://my-bucket/ --index-document index.html --error-document error.html>		-(to enable static hosting)
+
+<aws s3api put-public-access-block --bucket <bucket-name> --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false">		-(to enable public access)
+
+<aws s3api put-bucket-policy --bucket <bucket-name> --policy file://file-path>		-(to attach bucket policy)
+
+<aws configure get region>		-(to get the associated region while configuration)
+
+"http://<bucket-name>.s3-website.<AWS-region>.amazonaws.com"	-(The endpoint format for a static website hosted in an S3 bucket)
