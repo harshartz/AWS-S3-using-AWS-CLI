@@ -84,7 +84,7 @@ Use the following command to upload and attach the policy to your bucket:
 
 ***aws s3api put-bucket-policy --bucket BUCKET-NAME --policy file://FILE-PATH***
 
-Replace <bucket-name> with your bucket name and (FILE-PATH) with the path to the policy file you created.
+Replace (BUCKET-NAME) with your bucket name and (FILE-PATH) with the path to the policy file you created.
 
 ![11ss](https://github.com/harshartz/AWS-EC2/assets/130890384/dcd8bc54-85db-43d2-97b9-b45ae3732041)
 
