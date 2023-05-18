@@ -1,6 +1,6 @@
-#AWS S3 Static Website Deployment using CLI
+AWS S3 Static Website Deployment using CLI
 
-##First open your command-line interface (CLI) and proceed with configuring your details using the following command:
+First open your command-line interface (CLI) and proceed with configuring your details using the following command:
 
 ##aws configure
 
