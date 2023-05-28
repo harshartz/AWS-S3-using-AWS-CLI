@@ -2,7 +2,7 @@
 
 First open your command-line interface (CLI) and proceed with configuring your details using the following command:
 
-***aws configure***
+### `aws configure`
 
 ![1ss](https://github.com/harshartz/AWS-EC2/assets/130890384/4b5d8dac-c720-41d7-b25b-0d2326035073)
 
@@ -11,7 +11,7 @@ First open your command-line interface (CLI) and proceed with configuring your d
 
 Use the following command to create a bucket:
 
-***aws s3 mb s3://BUCKET-NAME***
+### `aws s3 mb s3://BUCKET-NAME`
 
 Replace (BUCKET-NAME) with a globally unique name for your bucket. Make sure it is unique across all existing buckets. To check if the bucket is created, use the command:
 
@@ -20,7 +20,7 @@ Replace (BUCKET-NAME) with a globally unique name for your bucket. Make sure it 
 
 Following command will list all the available buckets, and you should see your newly created bucket
 
-***aws s3 ls***
+### `aws s3 ls`
 
 ![3ss](https://github.com/harshartz/AWS-EC2/assets/130890384/9fcd5ea4-532e-4ea8-859b-da9cdbe25b7b)
 
@@ -29,7 +29,7 @@ Following command will list all the available buckets, and you should see your n
 
 To upload files to your bucket, use the command:
 
-***aws s3 sync PATH_OF_LOCAL_DIRECTORY s3://BUCKET-NAME***
+### `aws s3 sync PATH_OF_LOCAL_DIRECTORY s3://BUCKET-NAME`
 
 Replace (PATH OF LOCAL DIRECTORY) with the path of your local directory containing the website files, and (BUCKET-NAME) with the name of your bucket. To check the uploaded files, use the command:
 
@@ -40,7 +40,7 @@ Replace (PATH OF LOCAL DIRECTORY) with the path of your local directory containi
 
 Following command will list all the files in your bucket.
 
-***aws s3 ls s3://BUCKET-NAME***
+### `aws s3 ls s3://BUCKET-NAME`
 
 ![6ss](https://github.com/harshartz/AWS-EC2/assets/130890384/38b430d1-8fcc-45c9-bf32-8ecd57ddaf00)
 
@@ -49,7 +49,7 @@ Following command will list all the files in your bucket.
 
 To enable static website hosting for your bucket, use the command:
 
-***aws s3 website s3://BUCKET-NAME/ --index-document INDEX-DOCUMENT-NAME --error-document error.html***
+### `aws s3 website s3://BUCKET-NAME/ --index-document INDEX-DOCUMENT-NAME --error-document error.html`
 
 Replace (BUCKET-NAME) with your bucket name and (INDEX-DOCUMENT-NAME) with the name of your index document. This command configures the bucket to serve the specified index document and error page.
 
@@ -60,7 +60,7 @@ Replace (BUCKET-NAME) with your bucket name and (INDEX-DOCUMENT-NAME) with the n
 
 To make the bucket publicly accessible, use the command:
 
-***aws s3api put-public-access-block --bucket BUCKET-NAME --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"***
+### `aws s3api put-public-access-block --bucket BUCKET-NAME --public-access-block-configuration "BlockPublicAcls=false,IgnorePublicAcls=false,BlockPublicPolicy=false,RestrictPublicBuckets=false"`
 
 Replace (BUCKET-NAME) with your bucket name. This command disables the restrictions on public access to the bucket.
 
@@ -82,7 +82,7 @@ Save the file with a .json extension.
 
 Use the following command to upload and attach the policy to your bucket:
 
-***aws s3api put-bucket-policy --bucket BUCKET-NAME --policy file://FILE-PATH***
+### `aws s3api put-bucket-policy --bucket BUCKET-NAME --policy file://FILE-PATH`
 
 Replace (BUCKET-NAME) with your bucket name and (FILE-PATH) with the path to the policy file you created.
 
@@ -93,7 +93,7 @@ Replace (BUCKET-NAME) with your bucket name and (FILE-PATH) with the path to the
 
 The endpoint format for a static website hosted in an S3 bucket is: 
 
-***http://BUCKET-NAME.s3-website-AWS-REGION.amazonaws.com***
+### `http://BUCKET-NAME.s3-website-AWS-REGION.amazonaws.com`
 
 Replace (BUCKET-NAME) with your bucket name and (AWS REGION) with your default region (the one you set during configuration). Opening this endpoint will allow you to check if the website is running correctly.
 
